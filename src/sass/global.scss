@@ -1,0 +1,58 @@
+@import './variables.scss';
+
+html {
+    min-height: 100%;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: $font-Jost;
+    margin-bottom: 40px;
+}
+
+input:focus, video:focus, button:focus {
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+// Layout
+@import './layout/navegation/navbar.scss';
+@import './layout/main/main.scss';
+@import '../sass/layout/apartados/cards.scss';
+@import './layout/apartados/apartado.scss';
+@import './layout/video/video.scss';
+@import './layout/suscripcion/suscripcion.scss';
+@import './layout/footer/footer.scss';
+@import './layout/bgpaginas/bgpaginas.scss';
+@import './layout/paises/card-paises.scss';
+@import './layout/ofertas/descripcion-oferta.scss';
+@import './layout/galeria/galeria.scss';
+@import './layout/contacto/contacto.scss';
+@import './layout/nosotros/nosotros.scss';
+@import './layout/localizacion/localizacion.scss';

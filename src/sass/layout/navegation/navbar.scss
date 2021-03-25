@@ -1,0 +1,80 @@
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+
+    #logo {
+      z-index: 300;
+      .travel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        span {
+          font-size: 1.8rem;
+          font-weight: 600;
+          letter-spacing: 5px;
+          color: $color-dark;
+          margin-left: 1rem;
+
+          @media (max-width: 599px) {
+            font-size: 2.5rem;
+          }
+          @media (min-width: 600px) {
+            font-size: 2.5rem;
+          }
+
+          @media (min-width: 900px) {
+            font-size: 2.7rem;
+          }
+          @media (min-width: 1200px) {
+            font-size: 2.2rem;
+          }
+        }
+
+        span.open {
+          color: $color-white;
+        }
+
+        #logotipo {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+
+    @media (max-width: 599px) {
+      width: 90%;
+    }
+    @media (min-width: 600px) {
+      width: 90%;
+    }
+    @media (min-width: 1200px) {
+      width: 80%;
+    }
+    @media (min-width: 1800px) {
+      width: 60%;
+    }
+
+    // menu-btn
+    @import "./menubtn.scss";
+
+    // menu
+    @import "./menu-nav.scss";
+  }
+
+  @media(min-width: 1200px) {
+    width: 100%;
+    height: 110px;
+  }
+}

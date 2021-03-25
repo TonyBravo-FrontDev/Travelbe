@@ -1,11 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `T r a v e l b e`,
+    description: `Agencia de Viajes turisticos`,
+    author: `@tonybravo`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-fontawesome-css`,
+    `gatsby-transformer-ffmpeg`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,11 +27,18 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon-beach.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`galerias`, `paginas`, `paseos`, `apartados`, `localitations`],
+        //If using single types place them in this array.
+        singleTypes: [`contacto`, `seccion`, `video`, `nosotros`],
+      },
+    },
   ],
 }
